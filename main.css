@@ -4,6 +4,6 @@ h1 {
   text-align: center;
   text-shadow:;
 }
-div {
-  background-image:"http://images.playfrance.com/17/22930/artwork/zoom/5279.jpg"
+Premiere image {
+  background-image: url("http://images.playfrance.com/17/22930/artwork/zoom/5279.jpg")
 }
