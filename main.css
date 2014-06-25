@@ -2,11 +2,6 @@ h1 {
   font-family: Arial;
   color: #C0C0C0;
   text-align: center;
-  text-shadow: ;
-}
-Image de fond {
-  position: absolute;
-}
-Image {
-  position: absolute;
+  text-shadow:;
+  background-image:"http://images.playfrance.com/17/22930/artwork/zoom/5279.jpg"
 }
