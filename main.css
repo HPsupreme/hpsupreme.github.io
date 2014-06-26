@@ -46,6 +46,7 @@ background-color:lawngreen;
 margin-left: auto;
 margin-right: auto;
 border-radius: 4px;
+color:black;
 
 }
 .bouton_reponse a:hover {
@@ -79,7 +80,7 @@ width:150px;
 line-height:40px;
 text-align:center;
 vertical-align:middle;
-/*color:white;*/
+color:black;
 text-decoration:none;
 background-color:mediumturquoise;
 border-radius: 4px;
