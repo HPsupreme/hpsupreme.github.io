@@ -3,35 +3,99 @@
 <html>
 <head>
   <link rel="stylesheet" href="main.css">
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 <body id="fond">
+
   <div id="premiere_image">
     <h1 class="titre">Page de Quentin</h1>
-</div>
-<div class="bloc bloc_histoire">
-  <div class="texte_histoire">
   </div>
-  <div class="continuer">
-    <p>
-    <a href="#">Continuer</a>
-    </p>
- </div>
-</div>
-<div id="texte_1" class="bloc bloc_reponse">
-  <div class="texte_reponse">
+
+  <div class="bloc bloc_histoire">
+    <div class="texte_histoire">
+    </div>
   </div>
-  <div class="bouton_reponse">
-    <p>
-     <a href="#">Valider</a>
-   </p>
- </div>
-</div>
-<script type="text/javascript">
+
+  <div class="bloc bloc_reponse">
+    <div id="texte_1" class="texte_reponse">
+      <p id="reponse">Bonjour et bienvenue ! Cliquer sur "Continuer" pour commencer !</p>
+    </div>
+
+    <div id="texte_2" class="texte_reponse" style="display:none;">
+      <p id="reponse">A, B ou C ?</p>
+      <input type="text" id="input_2">
+    </div>
+
+    <div id="texte_3" class="texte_reponse" style="display:none;">
+      <p id="reponse">Text 3</p>
+    </div>
+
+    <div id="texte_4" class="texte_reponse" style="display:none;">
+      <p id="reponse">Text 4</p>
+    </div>
+
+    <div id="texte_5" class="texte_reponse" style="display:none;">
+      <p id="reponse">Text 5</p>
+    </div>
+
+    <div id="texte_6" class="texte_reponse" style="display:none;">
+      <p id="reponse">Text 6</p>
+    </div>
+
+    <div id="texte_7" class="texte_reponse" style="display:none;">
+      <p id="reponse">Text 7</p>
+    </div>
+
+    <div id="texte_8" class="texte_reponse" style="display:none;">
+      <p id="reponse">Text 8</p>
+    </div>
+
+    <div id="texte_9" class="texte_reponse" style="display:none;">
+      <p id="reponse">Text 9</p>
+    </div>
 
 
+    <div class="continuer">
+      <p>
+        <a href="#" onclick="maFonction()">Continuer</a>
+      </p>
+    </div>
+  </div>
 
 
+  <script type="text/javascript">
 
-</script>
+  var Page = 1;
+
+  function maFonction() {
+    if (Page === 1) {
+      $("#texte_1").css("display","none");
+      $("#texte_2").css("display","block"); 
+      Page++;
+    }
+    else if (Page === 2) {
+      var reponse = $("#input_2").val().toUpperCase();
+
+      if (reponse !== 'A' && reponse !== 'B' && reponse !== 'C') {
+        alert("nul");
+      }
+      else {
+        $("#texte_2").css("display","none");
+        if (reponse === "A") {
+          Page = 3;
+          $("#texte_4").css("display","block");
+        }
+        else if (reponse === "B") {
+          Page = 8;
+          $("#texte_9").css("display","block");
+        }
+        else {
+          Page = 6;
+          $("#texte_7").css("display","block");
+        }
+      }
+    }
+  }
+  </script>
 </body>
 </html>
